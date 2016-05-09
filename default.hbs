@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{! <meta>}}
+  {{> "meta"}}
+
+  {{! <link rel=stylesheet>}}
+  {{> "styles"}}
+
+  {{!favicon}}
+
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+  {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+  <header class="dodo-Header">
+    {{navigation}}
+  </header>
+  <main class="dodo-Content">
+    <div class="dodo-Content-inner">
+      {{{body}}}
+    </div>
+  </main>
+  {{> "scripts"}}
+  {{ghost_foot}}
+</body>
+</html>

@@ -1,0 +1,33 @@
+{{#foreach posts}}
+  <article class="dodo-Post">
+    {{#if image}}
+      <img class="dodo-Post-cover" src="{{image}}" alt="Post Cover">
+    {{/if}}
+    <header class="dodo-Post-header">
+      <h1 class="dodo-Post-heading">
+        <a class="dodo-Post-link" href="{{url}}">{{title}}</a>
+      </h1>
+    </header>
+    <div class="dodo-Post-content">
+      <a class="dodo-Post-link" href="{{url}}">
+        {{excerpt words="50"}}
+      </a>
+    </div>
+    <footer class="dodo-Post-footer">
+      <div class="dodo-Post-meta">
+        <div class="dodo-Post-date">
+          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+        </div>
+        <div class="dodo-Post-author">
+          {{author}}
+        </div>
+      </div>
+    </footer>
+  </article>
+{{/foreach}}
+
+{{#if pagination}}
+  <div class="dodo-Pagination">
+    {{pagination}}
+  </div>
+{{/if}}

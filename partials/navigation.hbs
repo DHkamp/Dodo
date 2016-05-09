@@ -1,0 +1,17 @@
+<nav class="dodo-Navigation" id="dodoNavigation">
+  <div class="dodo-Navigation-title">
+    <a class="dodo-Navigation-titleLink" href="{{@blog.url}}">{{@blog.title}}</a>
+  </div>
+  <div class="dodo-Navigation-trigger" id="dodoNavigationTrigger">
+    <div class="dodo-Navigation-triggerBar"></div>
+    <div class="dodo-Navigation-triggerBar"></div>
+    <div class="dodo-Navigation-triggerBar"></div>
+  </div>
+  <ul class="dodo-Navigation-linkList" id="dodoNavigationLinkList">
+    {{#foreach navigation}}
+    <li class="dodo-Navigation-linkItem">
+      <a class="dodo-Navigation-link" href="{{url absolute="true"}}">{{label}}</a>
+    </li>
+    {{/foreach}}
+  </ul>
+</nav>

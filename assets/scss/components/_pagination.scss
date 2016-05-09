@@ -1,0 +1,13 @@
+@import '../vars';
+
+.dodo-Pagination
+{
+  padding: 8px;
+  background-color: $white;
+  text-align: center;
+
+  a
+  {
+      margin: 0 16px;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../vars';
+
+.dodo-Tag
+{
+  padding: 8px;
+  margin: 0 auto;
+  background-color: $white;
+  border-radius: 2px;
+
+  &-header
+  {
+    position: relative;
+  }
+
+  &-image
+  {
+      width: 150px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 2px;
+      float: left;
+  }
+
+  &-heading
+  {
+    color: $highlight_weak;
+    position: absolute;
+    bottom: 0;
+    left: 158px;
+    margin-bottom: 0;
+    &--centered
+    {
+      text-align: center;
+    }
+  }
+
+  &-content
+  {
+    margin-top: 16px;
+  }
+}

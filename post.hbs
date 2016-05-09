@@ -1,0 +1,57 @@
+{{!< default}}
+
+{{#if @blog.cover}}
+  <style>
+    body {
+      background-image: url({{@blog.cover}});
+      background-size: cover;
+    }
+  </style>
+{{/if}}
+
+{{#post}}
+  <article class="dodo-Post dodo-Post--full">
+    {{#if image}}
+      <img class="dodo-Post-cover" src="{{image}}" alt="Post Cover">
+    {{/if}}
+    <header class="dodo-Post-header">
+      <h1 class="dodo-Post-heading">
+        {{title}}
+      </h1>
+      <div class="dodo-Post-meta">
+        <div class="dodo-Post-date">
+          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+        </div>
+        <div class="dodo-Post-author">
+          {{author}}
+        </div>
+      </div>
+    </header>
+    <div class="dodo-Post-content">
+      {{{content}}}
+    </div>
+    <footer class="dodo-Post-footer clearfix">
+      <div class="dodo-Post-tags">
+        {{#foreach tags}}
+          <a class="dodo-Post-tag" href="{{url}}" title="{{name}}">
+            #{{name}}
+          </a>
+        {{/foreach}}
+      </div>
+      {{#prev_post}}
+      <div class="dodo-Post-reference dodo-Post-reference--previous">
+        <a href="{{url}}">
+          < {{title}}
+        </a>
+      </div>
+      {{/prev_post}}
+      {{#next_post}}
+      <div class="dodo-Post-reference dodo-Post-reference--next">
+        <a href="{{url}}">
+          {{title}} >
+        </a>
+      </div>
+      {{/next_post}}
+    </footer>
+  </article>
+{{/post}}

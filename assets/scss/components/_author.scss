@@ -1,0 +1,49 @@
+@import '../vars';
+
+.dodo-Author
+{
+  padding: 8px;
+  margin: 0 auto;
+  background-color: $white;
+  border-radius: 2px;
+
+  &-image
+  {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+  }
+
+  &-metaCollection
+  {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px)
+{
+  .dodo-Author
+  {
+    &-header
+    {
+      width: 50%;
+      float: left;
+    }
+
+    &-content
+    {
+      width: 50%;
+      float: right;
+      padding: 0 8px 0 16px;
+      box-sizing: border-box;
+    }
+
+    &-meta
+    {
+      &-header
+      {
+        margin-top: 0;
+      }
+    }
+  }
+}

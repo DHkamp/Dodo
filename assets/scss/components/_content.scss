@@ -1,0 +1,19 @@
+.dodo-Content
+{
+    padding: 80px 0 0;
+    margin: 0 auto;
+
+    &-inner
+    {
+      background: rgba($black, .75);
+      padding: 16px;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+  .dodo-Content
+  {
+      width: 768px;
+  }
+}

@@ -1,0 +1,25 @@
+{{!< default}}
+
+<article class="dodo-Tag clearfix">
+  <header class="dodo-Tag-header clearfix">
+    {{#if tag.image}}
+      <img class="dodo-Tag-image" src="{{tag.image}}" alt="Tag Image" />
+    {{/if}}
+    <h1 class="dodo-Tag-heading {{#if tag.image}}dodo-Tag-heading--centered{{/if}}">{{tag.name}}</h1>
+  </header>
+  <div class="dodo-Tag-content">
+    <div class="dodo-Tag-description">
+      {{tag.description}}
+    </div>
+  </div>
+  <div class="dodo-Tag-postCollection">
+    <h2>Posts tagged with {{tag.name}}:</h2>
+    <ul class="dodo-Tag-postList">
+      {{#foreach posts}}
+        <li class="dodo-Tag-postItem">
+          <a class="dodo-Tag-postLink" href="{{url}}">{{title}}</a>
+        </li>
+      {{/foreach}}
+    </ul>
+  </div>
+</article>

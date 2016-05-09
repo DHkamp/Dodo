@@ -1,0 +1,65 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+
+{{! Everything inside the #author tags pulls data from the author }}
+{{#author}}
+{{#if cover}}
+  <style>
+    body {
+      background-image: url({{cover}});
+      background-size: cover;
+    }
+  </style>
+{{/if}}
+
+<article class="dodo-Author clearfix">
+  <header class="dodo-Author-header">
+    {{#if image}}
+      <img class="dodo-Author-image" src="{{image}}" alt="Author Image" />
+    {{/if}}
+  </header>
+  <div class="dodo-Author-content">
+    <div class="dodo-Author-meta">
+      <h2 class="dodo-Author-meta-header">General</h2>
+      <table class="dodo-Author-metaCollection">
+        <tr>
+          <td class="dodo-Author-metaData dodo-Author-metaData--key">
+            Name:
+          </td>
+          <td class="dodo-Author-metaData dodo-Author-metaData--value">
+            {{name}}
+          </td>
+        </tr>
+        {{#if location}}
+        <tr>
+          <td class="dodo-Author-metaData dodo-Author-metaData--key">
+            Location:
+          </td>
+          <td class="dodo-Author-metaData dodo-Author-metaData--value">
+            {{location}}
+          </td>
+        </tr>
+        {{/if}}
+        {{#if website}}
+        <tr>
+          <td class="dodo-Author-metaData dodo-Author-metaData--key">
+            Website:
+          </td>
+          <td class="dodo-Author-metaData dodo-Author-metaData--value">
+            <a href="{{website}}">{{website}}</a>
+          </td>
+        </tr>
+        {{/if}}
+      </table>
+    </div>
+    {{#if bio}}
+      <div class="dodo-Author-bio">
+        <h2>About</h2>
+        {{bio}}
+      </div>
+    {{/if}}
+  </div>
+</article>
+{{/author}}

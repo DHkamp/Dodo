@@ -1,0 +1,130 @@
+@import '../vars';
+
+.dodo-Post
+{
+  padding: 16px;
+  margin: 0 auto 25px;
+  background-color: $white;
+  border-radius: 2px;
+
+  &-header
+  {
+    margin: 0 0 16px;
+    padding: 0 0 8px;
+    border-bottom: 1px solid $black;
+  }
+
+  &-heading
+  {
+    margin: 0;
+    color: $highlight_weak;
+    >a
+    {
+      color: $highlight_weak;
+
+      &:hover
+      {
+        color: $highlight;
+      }
+    }
+  }
+
+  &-cover
+  {
+    max-width: calc(100% + 16px);
+    width: auto;
+    height: auto;
+    margin: -8px 0 8px -8px;
+    display: block;
+  }
+
+  &-link
+  {
+      text-decoration: none;
+      color: $black;
+
+      &:hover,
+      &:focus,
+      &:active
+      {
+        color: $black;
+      }
+  }
+
+  &-content
+  {
+    & img
+    {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    & pre
+    {
+      border: 2px solid $highlight_weak;
+      background-color: $black;
+    }
+  }
+
+  &-footer
+  {
+    margin: 16px 0 0;
+    padding: 8px 0 0;
+    border-top: 1px solid $black;
+  }
+
+  &-tags
+  {
+    margin: 16px 0;
+  }
+
+  &-tag
+  {
+    margin: 0 4px 4px;
+    display: inline-block;
+    color: $white;
+    background-color: $highlight_weak;
+    border-radius: 5px;
+    padding: 4px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active
+    {
+        color: $white;
+        background-color: $highlight;
+    }
+  }
+
+  &-reference
+  {
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &--previous
+    {
+      float: left;
+    }
+
+    &--next
+    {
+      float: right;
+    }
+  }
+
+
+  /* Following styles only apply to the single post view.*/
+  &--full
+  {
+    .dodo-Post
+    {
+        &-heading
+        {
+          margin: 0 0 8px;
+        }
+    }
+  }
+}

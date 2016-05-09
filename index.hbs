@@ -1,0 +1,11 @@
+{{!< default}}
+{{#if @blog.cover}}
+  <style>
+    body {
+      background-image: url({{@blog.cover}});
+      background-size: cover;
+    }
+  </style>
+{{/if}}
+
+{{> "loop"}}

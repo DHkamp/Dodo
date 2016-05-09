@@ -1,0 +1,59 @@
+@import 'vars';
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/content';
+@import 'components/post';
+@import 'components/pagination';
+@import 'components/author';
+@import 'components/tag';
+
+body
+{
+  margin               : 0;
+  background-color     : $black;
+  color                : $black;
+  font-family          : "Ubuntu", "Calibri", "Helvetica";
+  line-height          : 1.3;
+  font-size            : 14px;
+  position             : relative;
+  background-size      : cover;
+  background-repeat    : no-repeat;
+  background-attachment: fixed;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0s, opacity 0.5s linear 0s;
+
+  &.isVisible
+  {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+a
+{
+  color: $highlight_weak;
+
+  &:hover,
+  &:focus,
+  &:active
+  {
+    color: $highlight;
+  }
+}
+
+h1,
+h2
+{
+  margin: 16px 0;
+}
+
+.clearfix:after
+{
+  content: ".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
+

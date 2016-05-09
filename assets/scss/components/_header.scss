@@ -1,0 +1,16 @@
+@import '../vars';
+
+.dodo-Header
+{
+  position: fixed;
+  width: 100%;
+  background-color: $black;
+}
+
+@media screen and (min-width:769px)
+{
+  .dodo-Header
+  {
+    border-bottom: 1px solid $highlight_weak;
+  }
+}
