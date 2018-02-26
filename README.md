@@ -1,4 +1,3 @@
 Ghost Theme
 
-## TODO
-+ Feedback zum "Burger"-Menü hinzufügen.
+# PROBABLY OUTDATED
